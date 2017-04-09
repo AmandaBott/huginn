@@ -250,7 +250,7 @@ GEM
     evernote_oauth (0.2.3)
       evernote-thrift
       oauth (>= 0.4.1)
-    execjs (2.6.0)
+    execjs (2.7.0)
     faraday (0.12.1)
       multipart-post (>= 1.2, < 3)
     feedjira (2.1.2)
@@ -364,7 +364,7 @@ GEM
       actionmailer (>= 3.2)
       letter_opener (~> 1.0)
       railties (>= 3.2)
-    libv8 (3.16.14.19)
+    libv8 (6.3.292.48.1)
     liquid (4.0.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -390,6 +390,8 @@ GEM
     mimemagic (0.3.1)
     mini_magick (4.2.3)
     mini_portile2 (2.3.0)
+    mini_racer (0.1.15)
+      libv8 (~> 6.3)
     minitest (5.10.2)
     mqtt (0.3.1)
     multi_json (1.12.1)
@@ -498,7 +500,6 @@ GEM
       ffi (>= 0.5.0, < 2)
     rb-kqueue (0.2.4)
       ffi (>= 0.5.0)
-    ref (2.0.0)
     representable (3.0.4)
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
@@ -595,9 +596,6 @@ GEM
     systemu (2.6.4)
     term-ansicolor (1.6.0)
       tins (~> 1.0)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.7)
@@ -675,6 +673,7 @@ DEPENDENCIES
   dropbox-api!
   em-http-request (~> 1.1.2)
   evernote_oauth
+  execjs (~> 2.7.0)
   faraday (~> 0.9)
   faraday_middleware!
   feedjira (~> 2.1)
@@ -705,6 +704,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   loofah (~> 2.0)
   mini_magick
+  mini_racer (~> 0.1.15)
   mqtt
   multi_xml
   mysql2 (>= 0.3.18, < 0.5)
@@ -741,7 +741,6 @@ DEPENDENCIES
   spring (~> 2.0.2)
   spring-commands-rspec (~> 1.0.4)
   spring-watcher-listen (~> 2.0.1)
-  therubyracer (~> 0.12.3)
   tumblr_client!
   twilio-ruby (~> 3.11.5)
   twitter!
